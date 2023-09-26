@@ -155,7 +155,7 @@ function handleCardClick(event) {
       setTimeout(function() {
         isProcessing = false;
         flippedCards = [];
-      }, 400);
+      }, 600);
     } else {
       // Logic for when the two cards don't match
       setTimeout(function() {
@@ -163,7 +163,7 @@ function handleCardClick(event) {
         secondCard.style.backgroundColor = '';
         flippedCards = [];
         isProcessing = false;
-      }, 650);
+      }, 850);
     }
     // Increment the score and update the display
     if (!allCardsMatched()){
