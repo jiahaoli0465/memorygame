@@ -191,6 +191,10 @@ h1 {
 }
 
 @media (max-width: 768px) {
+html, body {
+   scroll-behavior: smooth;
+}
+
 #initialScreen h1, 
 #initialScreen p {
   text-align: center;
@@ -198,7 +202,7 @@ h1 {
 }
 
   #timerDisplay, #game, #scoreBoard {
-    width: 90%;
+    width: 87%;
     margin: 2% auto; /* Adjusted margin */
   }
 
