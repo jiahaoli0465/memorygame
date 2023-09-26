@@ -190,23 +190,17 @@ h1 {
   color: #555; /* Slightly lighter color for contrast */
 }
 
-
-/* Media query for mobile devices */
-/* Media query for mobile devices */
 @media (max-width: 768px) {
-  #gameBoard, #scoreBoard, #timerDisplay {
+  #timerDisplay, #game, #scoreBoard {
     width: 90%;
-    margin: 1% auto; /* Adjusted margin */
+    margin: 2% auto; /* Adjusted margin */
   }
 
   #timerDisplay {
-    margin-bottom: 0.5%; /* Reduce the bottom margin of the timer display */
+    margin-bottom: 2%; /* Reduce the bottom margin of the timer display */
   }
 
   #gameBoard {
-    margin-top: 0.5%; /* Reduce the top margin of the game board */
+    margin-top: 2%; /* Reduce the top margin of the game board */
   }
 }
-
-
-
