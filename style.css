@@ -191,6 +191,12 @@ h1 {
 }
 
 @media (max-width: 768px) {
+#initialScreen h1, 
+#initialScreen p {
+  text-align: center;
+  width: 95%;
+}
+
   #timerDisplay, #game, #scoreBoard {
     width: 90%;
     margin: 2% auto; /* Adjusted margin */
@@ -204,3 +210,4 @@ h1 {
     margin-top: 2%; /* Reduce the top margin of the game board */
   }
 }
+
