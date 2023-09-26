@@ -147,11 +147,10 @@ function startGame() {
 }
 
 function showRestartButton() {
-  // Blur the game container
   gameContainer.classList.add('blurred');
 
-  // Show the restart button
-  document.getElementById("restartGame").style.display = 'block';
+  // Show the game complete widget
+  document.getElementById("gameCompleteWidget").style.display = 'block';
 }
 
 function hideRestartButton() {
@@ -161,9 +160,13 @@ function hideRestartButton() {
   // Hide the restart button
   document.getElementById("restartGame").style.display = 'none';
 }
+document.getElementById("widgetRestartGame").addEventListener("click", restartGame);
 
 function restartGame() {
   // Reset game state
+  // Hide the game complete widget
+  document.getElementById("gameCompleteWidget").style.display = 'none';
+  
   gameStart = false;
   score = 0;
   flippedCards = [];
