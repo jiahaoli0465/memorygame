@@ -3,6 +3,7 @@ let lowestScore;
 if (localStorage.getItem('lowestScore')) {
   lowestScore = parseInt(localStorage.getItem('lowestScore'));
   document.getElementById("lowestScore").textContent = lowestScore;
+  document.getElementById("lowestScoreIn").textContent = lowestScore;
 } else {
   lowestScore = 99999;
 }
