@@ -24,7 +24,7 @@ let flippedCards = [];
 let isProcessing = false;
 // Timer variables
 
-let timer = 35;
+let timer = 30;
 let timerInterval;
 
 // Function to start the countdown timer
@@ -155,7 +155,7 @@ function handleCardClick(event) {
       setTimeout(function() {
         isProcessing = false;
         flippedCards = [];
-      }, 600);
+      }, 500);
     } else {
       // Logic for when the two cards don't match
       setTimeout(function() {
@@ -163,7 +163,7 @@ function handleCardClick(event) {
         secondCard.style.backgroundColor = '';
         flippedCards = [];
         isProcessing = false;
-      }, 850);
+      }, 750);
     }
     // Increment the score and update the display
     if (!allCardsMatched()){
