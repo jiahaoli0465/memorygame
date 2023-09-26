@@ -22,6 +22,42 @@ let gameStart = false;
 let score = 0;
 let flippedCards = [];
 let isProcessing = false;
+// Timer variables
+
+let timer = 35;
+let timerInterval;
+
+// Function to start the countdown timer
+function startTimer() {
+    timerInterval = setInterval(function() {
+        timer--;
+        document.getElementById("timer").textContent = timer;
+        if (timer <= 0) {
+            gameOver();
+        }
+    }, 1000);
+}
+
+// Function to stop the timer
+function stopTimer() {
+    clearInterval(timerInterval);
+}
+
+// Function to reset the timer
+function resetTimer() {
+    stopTimer();
+    timer = 35;
+    document.getElementById("timer").textContent = timer;
+}
+
+// Function to handle game over due to timer reaching 0
+// Function to handle game over due to timer reaching 0
+function gameOver() {
+  stopTimer();
+  document.getElementById("widgetTitle").textContent = "Game Over!";
+  document.getElementById("widgetMessage").textContent = "Time's up!";
+  showRestartButton();
+}
 
 
 // Array of colors for the game (16 colors)
@@ -33,11 +69,12 @@ const COLORS = [
 // Event listener to start the game when the button is clicked
 document.getElementById("startGame").addEventListener("click", function() {
   // Smoothly scroll to the game board
-  const gameBoardTop = document.getElementById("gameBoard").offsetTop;
+  const timerTop = document.getElementById("timerDisplay").offsetTop;
   window.scrollTo({
-    top: gameBoardTop,
+    top: timerTop,
     behavior: 'smooth'
-  });
+});
+
   
   // After a short delay, hide the initial screen
   setTimeout(() => {
@@ -93,20 +130,22 @@ function handleCardClick(event) {
       firstCard.classList.add("matched");
       secondCard.classList.add("matched");
       console.log("match")
+      
       // Check if all cards are matched
       if (allCardsMatched()) {
         score++;
+        stopTimer();
         document.getElementById("scoreDisplay").textContent = score;
-        console.log('all matched');
-        console.log(score);
-        console.log(lowestScore);
         if (score < lowestScore) {
             lowestScore = score;
             localStorage.setItem('lowestScore', lowestScore);
             document.getElementById("lowestScore").textContent = lowestScore;
         }
+        document.getElementById("widgetTitle").textContent = "Congratulations!";
+        document.getElementById("widgetMessage").textContent = "You've matched all the cards!";
         showRestartButton();
-      }
+    }
+    
     
       setTimeout(function() {
         isProcessing = false;
@@ -141,6 +180,7 @@ function allCardsMatched() {
 // Function to start the game
 function startGame() {
   hideRestartButton();
+  startTimer();
   shuffledColors = shuffle(COLORS);
   createDivsForColors(shuffledColors);
   gameStart = true;
@@ -164,6 +204,7 @@ document.getElementById("widgetRestartGame").addEventListener("click", restartGa
 
 function restartGame() {
   // Reset game state
+  resetTimer();
   // Hide the game complete widget
   document.getElementById("gameCompleteWidget").style.display = 'none';
   

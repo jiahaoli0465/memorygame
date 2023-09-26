@@ -14,8 +14,11 @@
         
         <p>Lowest Score: <span id="lowestScoreIn">?</span></p>
     </div>
-    <!-- Timer Display -->
 
+    <!-- Timer Display -->
+    <div id="timerDisplay" class="screen">
+        <p>Time Left: <span id="timer">35</span> seconds</p>
+    </div>
 
     <!-- Game Board -->
     <div id="gameBoard" class="screen">
@@ -26,9 +29,11 @@
             <button id="restartGame">Restart Game</button>
         </div>
     </div>
+
+    <!-- Game Complete Widget -->
     <div id="gameCompleteWidget" class="widget">
-      <h2>Congratulations!</h2>
-      <p>You've matched all the cards!</p>
+      <h2 id="widgetTitle">Congratulations!</h2>
+      <p id="widgetMessage">You've matched all the cards!</p>
       <button id="widgetRestartGame">Play Again</button>
     </div>
   

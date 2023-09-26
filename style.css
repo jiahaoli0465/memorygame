@@ -54,7 +54,7 @@ h1 {
 
 #game {
   width: 30%;
-  margin: 5% auto;
+  margin-bottom: -3%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
@@ -155,4 +155,29 @@ h1 {
 
 .widget button:hover {
   background-color: #555;
+}
+
+#timerDisplay {
+  width: 30%;
+  margin: 1% auto;
+  padding: 20px;
+  background-color: #e6e6e6; /* Light gray for the timer display */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+#timerDisplay p {
+  font-size: 1.2rem; /* Increase font size */
+  font-weight: 500; /* Make it slightly bold */
+  color: #333; /* Darker text color */
+  margin: 5px 0; /* Adjust spacing */
+}
+
+#timerDisplay span {
+  font-weight: 700; /* Bold font weight for the timer */
+  color: #555; /* Slightly lighter color for contrast */
 }
