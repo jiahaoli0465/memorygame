@@ -1,0 +1,89 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif; /* Optional: for better typography */
+  background-color: #40E0D0; /* Dark turquoise background */
+  scroll-behavior: smooth; /* Enable smooth scrolling */
+  overflow: hidden;
+  overflow-y: scroll; /* Always show vertical scrollbar */
+  user-select: none;
+}
+
+#initialScreen {
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #40E0D0; /* Dark turquoise background */
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+#startGame {
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border: none;
+  background-color: #20B2AA; /* Lighter turquoise for contrast */
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  pointer-events: auto;
+}
+
+#startGame:hover {
+  background-color: #2E8B57; /* Change color on hover for feedback */
+}
+
+#gameBoard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  /* background-color: rgba(165, 42, 42, 0.178); */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#game {
+  width: 30%; /* Reduced size */
+  margin: 5% auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns for 16 squares */
+  gap: 10px;
+  padding: 20px; /* Padding for the game board */
+  background-color: rgba(139, 69, 19, 0.7); /* Semi-transparent wood color for the game board */
+  border-radius: 10px; /* Rounded corners for the game board */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+}
+
+#game div {
+  border: 1px solid black;
+  width: 100%;
+  padding-top: 100%; /* This makes each square's height equal to its width */
+  position: relative;
+}
+
+/* This will blur the game container */
+#game.blurred {
+  filter: blur(5px); /* Adjust the value as needed */
+  pointer-events: none; /* Prevents clicking on the game while it's blurred */
+}
+
+/* This will style the restart button to be centered and hidden by default */
+#restartGame {
+  display: none; /* Hidden by default */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10; /* Ensures the button is above the game container */
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Memory Game!</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Initial Screen -->
+    <div id="initialScreen" class="screen">
+        <h1>Welcome to the Memory Game!</h1>
+        <p>Test your memory by matching pairs of colored squares. Can you achieve the lowest score?</p>
+        <button id="startGame">Start Game</button>
+        
+        <p>Lowest Score: <span id="lowestScore">?</span></p>
+    </div>
+
+    <!-- Game Board -->
+    <div id="gameBoard" class="screen">
+        <div id="game"></div>
+        <div id="scoreBoard">
+            <p>Attempts: <span id="scoreDisplay">0</span></p>
+            <p>Lowest Score: <span id="lowestScore">?</span></p>
+            <button id="restartGame">Restart Game</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+  </body>
+</html>
