@@ -1,3 +1,6 @@
+
+
+
 body {
   margin: 0;
   padding: 0;
@@ -55,6 +58,7 @@ h1 {
 #game {
   width: 30%;
   margin-bottom: -3%;
+  margin-top: -5%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
@@ -159,7 +163,8 @@ h1 {
 
 #timerDisplay {
   width: 30%;
-  margin: 1% auto;
+  margin: 3% auto;
+  margin-top: 1%;
   padding: 20px;
   background-color: #e6e6e6; /* Light gray for the timer display */
   border-radius: 10px;
@@ -181,3 +186,5 @@ h1 {
   font-weight: 700; /* Bold font weight for the timer */
   color: #555; /* Slightly lighter color for contrast */
 }
+
+
