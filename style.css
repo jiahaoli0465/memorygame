@@ -81,11 +81,38 @@ h1 {
   pointer-events: none;
 }
 
-#restartGame {
-  display: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 10;
+#scoreBoard {
+    width: 30%;
+    margin: 5% auto;
+    padding: 20px;
+    background-color: #e6e6e6; /* Light gray for the scoreboard */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
+
+#scoreBoard p {
+    font-size: 1.2rem; /* Increase font size */
+    font-weight: 500; /* Make it slightly bold */
+    color: #333; /* Darker text color */
+    margin: 5px 0; /* Adjust spacing */
+}
+
+#scoreBoard span {
+    font-weight: 700; /* Bold font weight for the score */
+    color: #555; /* Slightly lighter color for contrast */
+}
+
+#restartGame {
+    margin-top: 20px; /* Add some space above the restart button */
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+

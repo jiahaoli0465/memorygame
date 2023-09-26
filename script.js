@@ -23,6 +23,7 @@ let score = 0;
 let flippedCards = [];
 let isProcessing = false;
 
+
 // Array of colors for the game (16 colors)
 const COLORS = [
   "red", "blue", "green", "orange", "purple", "yellow", "cyan", "magenta",
