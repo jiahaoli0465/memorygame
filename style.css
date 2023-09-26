@@ -55,10 +55,12 @@ h1 {
   background-color: #f4f4f4;
 }
 
+.screen{
+  margin-top: 0%;
+}
 #game {
   width: 30%;
-  margin-bottom: -3%;
-  margin-top: -5%;
+  margin-bottom: 2%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
@@ -87,7 +89,8 @@ h1 {
 
 #scoreBoard {
     width: 30%;
-    margin: 5% auto;
+    margin: 0% auto;
+    
     padding: 20px;
     background-color: #e6e6e6; /* Light gray for the scoreboard */
     border-radius: 10px;
@@ -163,8 +166,8 @@ h1 {
 
 #timerDisplay {
   width: 30%;
-  margin: 3% auto;
-  margin-top: 1%;
+  margin: 2% auto;
+  margin-bottom: 2%;
   padding: 20px;
   background-color: #e6e6e6; /* Light gray for the timer display */
   border-radius: 10px;
@@ -186,5 +189,24 @@ h1 {
   font-weight: 700; /* Bold font weight for the timer */
   color: #555; /* Slightly lighter color for contrast */
 }
+
+
+/* Media query for mobile devices */
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  #gameBoard, #scoreBoard, #timerDisplay {
+    width: 90%;
+    margin: 1% auto; /* Adjusted margin */
+  }
+
+  #timerDisplay {
+    margin-bottom: 0.5%; /* Reduce the bottom margin of the timer display */
+  }
+
+  #gameBoard {
+    margin-top: 0.5%; /* Reduce the top margin of the game board */
+  }
+}
+
 
 

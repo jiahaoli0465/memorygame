@@ -68,19 +68,24 @@ const COLORS = [
 
 // Event listener to start the game when the button is clicked
 document.getElementById("startGame").addEventListener("click", function() {
-  // Smoothly scroll to the game board
-  const timerTop = document.getElementById("timerDisplay").offsetTop;
-  window.scrollTo({
-    top: timerTop,
-    behavior: 'smooth'
-});
+  // Calculate the position to scroll to
+  const gameBoard = document.getElementById("gameBoard");
+  const gameBoardTop = gameBoard.offsetTop;
+  const gameBoardHeight = gameBoard.offsetHeight;
+  const windowHeight = window.innerHeight;
+  const scrollToPosition = (gameBoardTop + (gameBoardHeight / 2)) - (windowHeight / 2);
 
-  
+  // Smoothly scroll to the calculated position
+  window.scrollTo({
+    top: scrollToPosition,
+    behavior: 'smooth'
+  });
+
   // After a short delay, hide the initial screen
   setTimeout(() => {
     document.getElementById("initialScreen").style.display = 'none';
   }, 1000);
-  
+
   // Start the game
   startGame();
 });
